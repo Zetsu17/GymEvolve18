@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Diet Plan - Gym Evolve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../assets/images/customize-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .customize-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .customize-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .customize-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .customize-container label {
+            font-weight: bold;
+        }
+
+        .customize-container input,
+        .customize-container select,
+        .customize-container textarea,
+        .customize-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .customize-container input,
+        .customize-container select,
+        .customize-container textarea {
+            background: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        .customize-container button {
+            background-color: #ff5722;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .customize-container button:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Gym Evolve Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="plan.html">Diet Plan</a></li>
+                <li><a href="../workout/equipment.html">Workouts</a></li>
+                <li><a href="../products.html">Products</a></li>
+                <li><a href="../aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="customize-container">
+        <h2>Customize Your Diet Plan</h2>
+        <form action="#" method="POST">
+            <!-- Meal Preferences -->
+            <label for="meal-preferences">Meal Preferences</label>
+            <select id="meal-preferences" name="meal-preferences" required>
+                <option value="">Select your preference</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+                <option value="pescatarian">Pescatarian</option>
+            </select>
+
+            <!-- Daily Calorie Intake -->
+            <label for="calories">Daily Calorie Intake (kcal)</label>
+            <input type="number" id="calories" name="calories" placeholder="e.g., 2000" min="1000" max="4000" required>
+
+            <!-- Dietary Restrictions -->
+            <label for="restrictions">Dietary Restrictions</label>
+            <textarea id="restrictions" name="restrictions" placeholder="e.g., Allergic to nuts, lactose intolerant" rows="4"></textarea>
+
+            <!-- Fitness Goals -->
+            <label for="goals">Fitness Goals</label>
+            <select id="goals" name="goals" required>
+                <option value="">Select your goal</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="maintenance">Maintenance</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gym Evolve. All rights reserved.</p>
+    </footer>
+    <script src="../js/diet.js"></script>  <!-- Link diet.js to handle diet customization -->
+</body>
+</html>

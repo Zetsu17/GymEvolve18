@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gym Evolve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('assets/images/dashboard-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dashboard-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-container ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .dashboard-container ul li {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .dashboard-container ul li button {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dashboard-container ul li button:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Gym Evolve Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout/workout.html">Workouts</a></li>
+                <li><a href="diet/plan.html">Diet Plan</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Welcome to Your Dashboard</h2>
+        <ul>
+            <li><button onclick="location.href='workout/workout.html'">View Workouts</button></li>
+            <li><button onclick="location.href='diet/plan.html'">View Diet Plans</button></li>
+            <li><button onclick="location.href='products.html'">Shop Products</button></li>
+            <li><button onclick="location.href='aboutus.html'">Learn About Us</button></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gym Evolve. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user'])) {
+    // If not logged in, redirect to login page
+    header('Location: ../login.php');
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout - Gym Evolve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../assets/images/workout-background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e64a19;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .workout-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .workout-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .option-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .option-item {
+            flex: 1;
+            max-width: 250px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .option-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .option-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .option-item h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Gym Evolve Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../workout/workout.php">Workouts</a></li>
+                <li><a href="../diet/plan.php">Diet Plan</a></li>
+                <li><a href="../products.php">Products</a></li>
+                <li><a href="../aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workout-container">
+        <h2>Select Your Workout Type</h2>
+        <div class="option-list">
+            <div class="option-item" onclick="window.location.href='equipment.html'">
+                <img src="../assets/images/equipment-workout.png" alt="With Equipment">
+                <h3>With Equipment</h3>
+            </div>
+            <div class="option-item" onclick="window.location.href='no_equipment.html'">
+                <img src="../assets/images/no-equipment-workout.png" alt="Without Equipment">
+                <h3>Without Equipment</h3>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="../health_calculator.html" class="btn">Check Your Health with Our Health Calculator</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gym Evolve. All rights reserved.</p>
+    </footer>
+</body>
+</html>

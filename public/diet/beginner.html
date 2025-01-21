@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Diet Plan - Gym Evolve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../assets/images/beginner-background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            text-align: center;
+        }
+
+        header .logo img {
+            max-width: 150px; /* Set logo size */
+            height: auto;
+            margin-bottom: 10px; /* Add spacing below the logo */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center the navigation links */
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .diet-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .diet-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #ff9800;
+        }
+
+        .diet-plan {
+            list-style: none;
+            padding: 0;
+        }
+
+        .diet-plan li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .diet-plan li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .diet-plan img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .diet-plan h4 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #ffcc80;
+        }
+
+        .diet-plan p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .diet-plan li {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .diet-plan img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Gym Evolve Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../workout/workout.html">Workouts</a></li>
+                <li><a href="plan.html">Diet Plan</a></li>
+                <li><a href="../products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="diet-container">
+        <h2>Beginner Diet Plan</h2>
+        <ul class="diet-plan">
+            <li>
+                <img src="../assets/images/breakfast-beginner.jpg" alt="Breakfast">
+                <div>
+                    <h4>Breakfast</h4>
+                    <p>Scrambled eggs, whole-grain toast, and a glass of milk.</p>
+                </div>
+            </li>
+            <li>
+                <img src="../assets/images/lunch-beginner.jpg" alt="Lunch">
+                <div>
+                    <h4>Lunch</h4>
+                    <p>Grilled chicken salad with olive oil and lemon dressing.</p>
+                </div>
+            </li>
+            <li>
+                <img src="../assets/images/dinner-beginner.jpg" alt="Dinner">
+                <div>
+                    <h4>Dinner</h4>
+                    <p>Baked salmon with steamed broccoli and brown rice.</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gym Evolve. All rights reserved.</p>
+    </footer>
+</body>
+</html>
