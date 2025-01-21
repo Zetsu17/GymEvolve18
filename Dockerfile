@@ -1,18 +1,23 @@
-# Use an official PHP runtime as a parent image (PHP 8.2)
-FROM php:8.2-cli
+# Use an official PHP image from the Docker Hub
+FROM php:7.4-apache
 
-# Set the working directory inside the container
-WORKDIR /var/www
+# Set the working directory
+WORKDIR /var/www/html
 
-# Copy the current directory contents into the container at /var/www
+# Install system dependencies and tools needed for Composer
+RUN apt-get update && apt-get install -y \
+    curl \
+    git \
+    unzip
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Copy your PHP app code into the container
 COPY . .
 
-# Install dependencies, including Composer
-RUN curl -sS https://getcomposer.org/installer | php && \
-    php composer.phar install
+# Install Composer dependencies
+RUN composer install
 
-# Expose port 8000 to the host
-EXPOSE 8000
-
-# Start the PHP built-in server on port 8000, serving files from the public directory
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public", "index.php"]
+# Expose port 80
+EXPOSE 80
